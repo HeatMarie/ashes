@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+  --bunker: #0b1118;
+  --stone: #7d8487;
+  --cove: #051e3d;
+  --sapphire: #052d61;
+  --fire: #ab3a06;
+  --ashesRed: #930920;
+
+  --test: #cedae8;
+
+}
 
 html,
 body {
@@ -17,6 +31,42 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.wrapper { 
+  background-color: var(--bunker);
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 100%;
+}
+
+.wrapper h1{ 
+  margin: 0;
+  line-height: 1;
+  font-size: 4em;
+  padding-left: 5px;
+  font-family: 'Rubik Dirt', cursive;
+  color: transparent;
+  text-transform: uppercase;
+  background-image: linear-gradient(to left, var(--stone), var(--fire), var(--ashesRed));
+  -webkit-background-clip: text;
+  animation: animate 4s linear infinite;
+  -webkit-background-size: 500%;
+  background-size: 300%;
+}
+
+@keyframes animate{ 
+  0%{
+    background-position: 0 100%;
+  }
+  50%{
+    background-position: 100% 0;
+  }
+  100%{
+    background-position: 0 100%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
